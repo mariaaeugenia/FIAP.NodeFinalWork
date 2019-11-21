@@ -6,6 +6,19 @@ const user = require('../models/user');
 const userModel = new user();
 
 class UsersController {
+    static getAll(req, res) {
+        userModel.getAll()
+            .then(snapshot => {
+                const users = snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    name: doc.data()['name'],
+                    email: doc.data()['email']
+                }));
+                return res.json({ users });
+            })
+            .catch(err => res.sendStatus(500).json(err));
+    }
+
     static getById(req, res) {
         const id = req.params.id;
         const key = `user_${id}`;

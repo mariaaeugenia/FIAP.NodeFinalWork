@@ -13,6 +13,10 @@ class User extends baseModel {
                     .where('password', operators.EQUAL, password)
                     .get();
     }
+
+    getAll() {
+        return this.collection.get();
+    }
     
     get(id) {
         return this.collection.doc(id).get();
