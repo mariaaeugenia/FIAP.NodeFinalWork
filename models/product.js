@@ -19,6 +19,10 @@ class Product extends baseModel {
         return this.collection.add(product);
     }
 
+    update(id, product) {
+        return this.collection.doc(id).update(product);
+    }
+
     delete(id) {
         return this.collection.doc(id).delete();
     }

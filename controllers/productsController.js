@@ -29,6 +29,20 @@ class ProductsController {
             .catch(err => res.sendStatus(500).json(err));
     }
 
+    static update(req, res) {
+        const id = req.params.id;
+        const updateProduct = {
+            name: req.body.name,
+            description: req.body.description,
+            price: parseFloat(req.body.price)
+        }
+
+        productModel
+            .update(id, updateProduct)
+            .then(() => res.sendStatus(200))
+            .catch(err => res.sendStatus(500).json(err));
+    }
+
     static delete(req, res) {
         const id = req.params.id;
 
