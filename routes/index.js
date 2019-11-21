@@ -1,8 +1,7 @@
 const express = require('express');
-const users = require('./users')
-const router = express.Router();
-
+const users = require('./users');
 const verifyToken = require('../middlewares/verifyToken');
+const router = express.Router();
 
 router.use('/users', verifyToken, users);
 
