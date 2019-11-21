@@ -12,9 +12,8 @@ class AuthController {
                 }
 
                 const [{ id }] = user.docs;
-                return res.json({ 
-                    token: createToken({ id }) 
-                });
+                const token = createToken({ id });
+                return res.json({ token })
             })
             .catch(err => {
                 return res.json(err);
