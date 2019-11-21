@@ -3,7 +3,7 @@ const operators = require('../utils/operators');
 
 class User extends baseModel {
     constructor() {
-        super()
+        super();
         this.collection = this.db.collection('users');
     }
 
@@ -11,12 +11,11 @@ class User extends baseModel {
         return this.collection
                     .where('email', operators.EQUAL, email)
                     .where('password', operators.EQUAL, password)
-                    .get()
+                    .get();
     }
     
     get(id) {
-        return this.collection
-            .doc(id).get()
+        return this.collection.doc(id).get();
     }
 }
 
