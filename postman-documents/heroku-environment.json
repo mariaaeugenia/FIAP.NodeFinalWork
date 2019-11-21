@@ -1,0 +1,14 @@
+{
+	"id": "30d6e2d6-2a72-46e9-b011-a4519954d983",
+	"name": "Heroku",
+	"values": [
+		{
+			"key": "api_url",
+			"value": "http://localhost:3000",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-11-21T16:42:35.145Z",
+	"_postman_exported_using": "Postman/7.9.0"
+}

@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "55c561af-5c7f-406c-a3b0-9e13ea12aa4c",
+		"name": "FIAP - Node API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Authorization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"leandro.romano@teste.com\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlBKOFh4T1EyVW5YRHNDa1ZIVmEwIiwiaWF0IjoxNTc0MzUyNDk1LCJleHAiOjE1NzQzOTU2OTV9.u6vrZlKeEaKAQFZWwJMXriE3FXyhEcheA-wr_us4Caw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Leandro Romano 2\",\n\t\"email\": \"leandro.romano@teste.com\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/users",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlBKOFh4T1EyVW5YRHNDa1ZIVmEwIiwiaWF0IjoxNTc0MzUyNDk1LCJleHAiOjE1NzQzOTU2OTV9.u6vrZlKeEaKAQFZWwJMXriE3FXyhEcheA-wr_us4Caw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/users",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlBKOFh4T1EyVW5YRHNDa1ZIVmEwIiwiaWF0IjoxNTc0MzUyNDk1LCJleHAiOjE1NzQzOTU2OTV9.u6vrZlKeEaKAQFZWwJMXriE3FXyhEcheA-wr_us4Caw"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/users/ut1F7oBvMZpB6WRbzZAt",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"ut1F7oBvMZpB6WRbzZAt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlBKOFh4T1EyVW5YRHNDa1ZIVmEwIiwiaWF0IjoxNTc0MzUyNDk1LCJleHAiOjE1NzQzOTU2OTV9.u6vrZlKeEaKAQFZWwJMXriE3FXyhEcheA-wr_us4Caw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/users/PJ8XxOQ2UnXDsCkVHVa0",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"PJ8XxOQ2UnXDsCkVHVa0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlBKOFh4T1EyVW5YRHNDa1ZIVmEwIiwiaWF0IjoxNTc0MzUyNDk1LCJleHAiOjE1NzQzOTU2OTV9.u6vrZlKeEaKAQFZWwJMXriE3FXyhEcheA-wr_us4Caw"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Leandro Romano\",\n\t\"email\": \"leandro.romano@teste.com\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/users/qocwt8JMETz3mkVcPVpA",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"qocwt8JMETz3mkVcPVpA"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkZVVDlFeDhFT2RXOURKY1RTRFp6IiwiaWF0IjoxNTc0MzUzODYzLCJleHAiOjE1NzQzOTcwNjN9.VLKz5vrdlfYYEJA1qtWsPaNNFYS3Udf143DFBpXd5-w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/products",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkZVVDlFeDhFT2RXOURKY1RTRFp6IiwiaWF0IjoxNTc0MzUzODYzLCJleHAiOjE1NzQzOTcwNjN9.VLKz5vrdlfYYEJA1qtWsPaNNFYS3Udf143DFBpXd5-w"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/products/KRHYECEaOBYt0wITllXz",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"products",
+								"KRHYECEaOBYt0wITllXz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkZVVDlFeDhFT2RXOURKY1RTRFp6IiwiaWF0IjoxNTc0MzUzODYzLCJleHAiOjE1NzQzOTcwNjN9.VLKz5vrdlfYYEJA1qtWsPaNNFYS3Udf143DFBpXd5-w"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"MacBook Pro 16-inch\",\n\t\"description\": \"An awesome computer.\",\n\t\"price\": 2399\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/products/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkZVVDlFeDhFT2RXOURKY1RTRFp6IiwiaWF0IjoxNTc0MzUzODYzLCJleHAiOjE1NzQzOTcwNjN9.VLKz5vrdlfYYEJA1qtWsPaNNFYS3Udf143DFBpXd5-w"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"MacBook Pro 16-inch Intel Core i9 32GB RAM\",\n\t\"description\": \"An awesome computer.\",\n\t\"price\": 2499\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/products/KRHYECEaOBYt0wITllXz",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"products",
+								"KRHYECEaOBYt0wITllXz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkZVVDlFeDhFT2RXOURKY1RTRFp6IiwiaWF0IjoxNTc0MzUzODYzLCJleHAiOjE1NzQzOTcwNjN9.VLKz5vrdlfYYEJA1qtWsPaNNFYS3Udf143DFBpXd5-w"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/products/AW0STvmuI2rFSxF3J8BO",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"products",
+								"AW0STvmuI2rFSxF3J8BO"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
