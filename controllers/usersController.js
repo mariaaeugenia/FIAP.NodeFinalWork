@@ -3,7 +3,7 @@ const cacheManager = require('cache-manager');
 const memoryCache = cacheManager.caching(cache);
 
 const user = require('../models/user');
-const userModel = user();
+const userModel = new user();
 
 class UsersController {
     static getById(req, res) {
