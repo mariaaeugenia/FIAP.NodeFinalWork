@@ -16,6 +16,15 @@ class ProductsController {
             });
     }
 
+    static get(req, res) {
+        const id = req.params.id;
+
+        productModel
+            .get(id)
+            .then(product => res.json(product.data()))
+            .catch(err => res.status(500).json(err));
+    }
+
     static add(req, res) {
         const newProduct = {
             name: req.body.name,
