@@ -11,7 +11,7 @@ Este é um projeto final para o módulo de **Desenvolvimento de APIs com Node.js
 - **firebase**: Biblioteca para integração da aplicação Node.js com o banco de dados.
 - **jsonwebtoken**: Biblioteca para realizar a validação e criação de token JWT.
 
-As bibliotecas utilizadas possuem um número fixo de versão para garantir o funcionamento no futuro.
+**As bibliotecas utilizadas possuem um número fixo de versão para garantir o funcionamento no futuro.**
 
 ### Funcionalidades
 - [x] Criação/Validação do Token deverá ser usado JWT;
@@ -24,6 +24,10 @@ As bibliotecas utilizadas possuem um número fixo de versão para garantir o fun
 - [x] Deverá existir uma organização no projeto, por exemplo, MVC (Model View Controller);
 - [x] Deverá existir integração com base de dados, por exemplo, firebase;
 - [x] Deverá estar disponível no Heroku.
+
+### Documentação / Postman
+
+O projeto conta com **`collections`** e **`environments`** do *Postman* para auxiliar os testes. Os arquivos estão localizados no diretório **`postman-documents`**.
 
 ### Setup
 
