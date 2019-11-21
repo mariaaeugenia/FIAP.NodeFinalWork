@@ -1,12 +1,5 @@
 const baseModel = require('./baseModel');
-const OPERATORS = {
-    MINOR: '<',
-    MONIOR_EQUAL: '<=',
-    EQUAL: '==',
-    GRATER_EQUAL: '>=',
-    GRATER: '>',
-    CONTAIN: 'array-contains'
-};
+const operators = require('../utils/operators');
 
 class User extends baseModel {
     constructor() {
@@ -16,8 +9,8 @@ class User extends baseModel {
 
     auth(email, password) {
         return this.collection
-                    .where('email', OPERATORS.EQUAL, email)
-                    .where('password', OPERATORS.EQUAL, password)
+                    .where('email', operators.EQUAL, email)
+                    .where('password', operators.EQUAL, password)
                     .get()
     }
     
