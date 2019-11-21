@@ -23,25 +23,19 @@ class ProductsController {
             price: parseFloat(req.body.price)
         };
 
-        productModel.add(newProduct)
-            .then(() => {
-                return res.sendStatus(201);
-            })
-            .catch(err => {
-                return res.sendStatus(500).json(err);
-            });
+        productModel
+            .add(newProduct)
+            .then(() => res.sendStatus(201))
+            .catch(err => res.sendStatus(500).json(err));
     }
 
     static delete(req, res) {
         const id = req.params.id;
 
-        productModel.delete(id)
-            .then(() => {
-                return res.sendStatus(200);
-            })
-            .catch(err => {
-                return res.status(500).json(err);
-            });
+        productModel
+            .delete(id)
+            .then(() => res.sendStatus(200))
+            .catch(err => res.status(500).json(err));
     }
 }
 
