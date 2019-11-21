@@ -3,7 +3,8 @@ const productModel = new product();
 
 class ProductsController {
     static getAll(req, res) {
-        productModel.getAll()
+        productModel
+            .getAll()
             .then(snapshot => {
                 const products = snapshot.docs.map(doc => ({
                     id: doc.id,
@@ -11,9 +12,7 @@ class ProductsController {
                 }));
                 return res.json({ products });
             })
-            .catch(err => {
-                return res.sendStatus(500).json(err);
-            });
+            .catch(err => res.status(500).json(err));
     }
 
     static get(req, res) {
