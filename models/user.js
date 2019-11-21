@@ -21,6 +21,18 @@ class User extends baseModel {
     get(id) {
         return this.collection.doc(id).get();
     }
+
+    add(user) {
+        return this.collection.add(user);
+    }
+
+    update(id, user) {
+        return this.collection.doc(id).update(user);
+    }
+
+    delete(id) {
+        return this.collection.doc(id).delete();
+    }
 }
 
 module.exports = User
