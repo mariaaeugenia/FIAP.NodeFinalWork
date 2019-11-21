@@ -21,9 +21,14 @@ class UsersController {
                         return res.sendStatus(404).send({ message: 'User not found.' });
                     }
                     
-                    const userData = user.data();
-                    memoryCache.set(key, userData);
-                    return res.json(userData);
+                    const userObject = {
+                        id: user.id,
+                        ...user.data()
+                    };
+                    delete userObject.password;
+
+                    memoryCache.set(key, userObject);
+                    return res.json(userObject);
                 })
                 .catch(err => {
                     return res.sendStatus(500).json(err);
