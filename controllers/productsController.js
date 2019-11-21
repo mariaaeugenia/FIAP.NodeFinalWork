@@ -17,14 +17,15 @@ class ProductsController {
     }
 
     static add(req, res) {
-        const newObj = {
-            name: 'MacBook',
-            price: 100
+        const newProduct = {
+            name: req.body.name,
+            description: req.body.description,
+            price: parseFloat(req.body.price)
         };
 
-        productModel.add(newObj)
-            .then(product => {
-                return res.sendStatus(201).send({ message: 'ok' });
+        productModel.add(newProduct)
+            .then(() => {
+                return res.sendStatus(201);
             })
             .catch(err => {
                 return res.sendStatus(500).json(err);
