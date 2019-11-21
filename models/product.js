@@ -7,8 +7,16 @@ class Product extends baseModel {
         this.collection = this.db.collection('products');
     }
 
+    getAll() {
+        return this.collection.get();
+    }
+
     get(id) {
         return this.collection.doc(id).get();
+    }
+
+    add(product) {
+        return this.collection.add(product);
     }
 }
 

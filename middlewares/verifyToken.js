@@ -15,7 +15,6 @@ module.exports = (request, response, next) => {
         if (error) {
             return response.status(500).send({ error });
         }
-        console.log(decoded);
         next();
     });
 }
