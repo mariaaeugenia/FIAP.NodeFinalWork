@@ -1,0 +1,24 @@
+{
+  "name": "fiap.nodefinalwork",
+  "version": "1.0.0",
+  "description": "A final project for Node class.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=prod nodemon index.js",
+    "start-dev": "NODE_ENV=dev nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandroromn/FIAP.NodeFinalWork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandroromn/FIAP.NodeFinalWork/issues"
+  },
+  "homepage": "https://github.com/leandroromn/FIAP.NodeFinalWork#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
