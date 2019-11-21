@@ -18,6 +18,10 @@ class Product extends baseModel {
     add(product) {
         return this.collection.add(product);
     }
+
+    delete(id) {
+        return this.collection.doc(id).delete();
+    }
 }
 
 module.exports = Product

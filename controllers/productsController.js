@@ -29,7 +29,19 @@ class ProductsController {
             })
             .catch(err => {
                 return res.sendStatus(500).json(err);
+            });
+    }
+
+    static delete(req, res) {
+        const id = req.params.id;
+
+        productModel.delete(id)
+            .then(() => {
+                return res.sendStatus(200);
             })
+            .catch(err => {
+                return res.status(500).json(err);
+            });
     }
 }
 
